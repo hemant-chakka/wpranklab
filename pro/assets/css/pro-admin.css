@@ -1,0 +1,573 @@
+/* Pro admin design system (scoped) */
+.wprl-pro-wrap {
+  --wprl-yellow: #FEB201;
+  --wprl-orange: #FB6A08;
+  --wprl-blue: #177CD4;
+  --wprl-teal: #19AEAD;
+  --wprl-lightblue: #E5F8FF;
+  --wprl-black: #000000;
+  --wprl-border: #E6E6E6;
+
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.wprl-pro-wrap a { text-decoration: none; }
+
+.wprl-pro-brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin: 10px 0 18px;
+}
+
+.wprl-pro-wordmark{
+  margin:0;
+  font-family: 'Lilita One', Inter, sans-serif;
+  font-size: 34px;
+  letter-spacing: 1px;
+  color: var(--wprl-yellow);
+  line-height: 1;
+}
+
+.wprl-pro-panel{
+  background: #ffffff;
+  border: 1px solid var(--wprl-border);
+  border-radius: 14px;
+  padding: 26px 26px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.08);
+  max-width: 1200px;
+}
+
+.wprl-pro-grid{
+  display:grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items:start;
+}
+
+@media (max-width: 1100px){
+  .wprl-pro-grid{ grid-template-columns: 1fr; }
+}
+
+.wprl-pro-title{
+  margin: 0 0 18px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--wprl-black);
+}
+
+.wprl-field{ margin-bottom: 14px; }
+
+.wprl-label{
+  display:block;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 6px;
+  color: var(--wprl-black);
+}
+
+.wprl-input{
+  width: 360px;
+  max-width: 100%;
+  height: 38px;
+  border-radius: 6px;
+  border: 1px solid #CFCFCF;
+  padding: 8px 10px;
+  font-size: 14px;
+  background: #fff;
+}
+
+.wprl-pro-actions{
+  display:flex;
+  gap: 12px;
+  align-items:center;
+  margin: 12px 0 14px;
+  flex-wrap: wrap;
+}
+
+.wprl-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+}
+
+.wprl-btn-outline{
+  background: #fff;
+  border-color: #000;
+  color: #000;
+}
+
+.wprl-btn-teal{
+  background: var(--wprl-teal);
+  border-color: var(--wprl-teal);
+  color: #fff;
+}
+
+.wprl-btn-teal .dashicons{
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+}
+
+.wprl-btn-yellow{
+  background: var(--wprl-yellow);
+  border-color: var(--wprl-yellow);
+  color: #fff;
+  min-width: 220px;
+}
+
+.wprl-pro-upgrade-line{
+  margin: 6px 0 8px;
+  font-size: 14px;
+  color: #222;
+}
+
+.wprl-pro-upgrade-line a{
+  color: var(--wprl-blue);
+  font-weight: 600;
+}
+
+.wprl-pro-status{
+  margin: 0;
+  font-size: 14px;
+  color: #222;
+}
+
+.wprl-pro-help-card{
+  background: #fff;
+  border: 1px solid var(--wprl-border);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+  padding: 26px 26px 24px;
+  text-align:center;
+}
+
+.wprl-pro-help-brand{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.wprl-pro-wordmark-sm{
+  font-family: 'Lilita One', Inter, sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: var(--wprl-yellow);
+}
+
+.wprl-pro-help-title{
+  margin: 10px 0 10px;
+  font-size: 22px;
+  font-weight: 800;
+  color: #111;
+}
+
+.wprl-pro-help-text{
+  margin: 0 auto 18px;
+  max-width: 420px;
+  color: #444;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+/* Make WP notice widths align with panel */
+.wprl-pro-wrap .notice{
+  max-width: 1200px;
+}
+
+/* --- Free dashboard styling applied to Pro dashboard --- */
+.wprl-pro-wrap.wpranklab-wrap, .wprl-pro-wrap.wpranklab-wrap *{
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.wprl-pro-wrap .wprl-brand{
+  display:flex;
+  flex-wrap: wrap; /* keep brand on one row, but allow full-width blocks below */
+  align-items:center;
+  gap:12px;
+  margin: 8px 0 18px;
+}
+
+/* Logo */
+.wprl-pro-wrap .wprl-logo-img{
+  display:block;
+  max-width: 260px;
+  height: auto;
+}
+
+/* Alert area (custom, not WordPress core notices) */
+.wprl-pro-wrap .wprl-alert-area{
+  margin: 12px 0 16px;
+}
+
+.wprl-pro-wrap .wprl-alert{
+  padding: 12px 14px;
+  border-radius: 6px;
+  border-left: 4px solid var(--wprl-blue);
+  background: var(--wprl-lightblue);
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+.wprl-pro-wrap .wprl-alert + .wprl-alert{
+  margin-top: 10px;
+}
+
+.wprl-pro-wrap .wprl-alert--success{
+  border-left-color: var(--wprl-green);
+  background: rgba(25, 174, 173, 0.10);
+}
+
+.wprl-pro-wrap .wprl-alert--warning{
+  border-left-color: var(--wprl-yellow);
+  background: rgba(254, 178, 1, 0.12);
+}
+
+.wprl-pro-wrap .wprl-alert-actions{
+  margin: 8px 0 0;
+}
+
+.wprl-pro-wrap .wprl-logo-text{
+  font-family: 'Lilita One', Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 34px;
+  line-height: 1;
+  color: var(--wprl-yellow);
+  margin:0;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.wprl-pro-wrap h1{
+  margin-top: 0;
+}
+
+
+
+/* Make Scan button match Free */
+.wprl-pro-wrap .button-primary{
+  background: var(--wprl-blue);
+  border-color: var(--wprl-blue);
+  box-shadow:none;
+  border-radius:4px;
+  padding: 6px 14px;
+}
+.wprl-pro-wrap .button-primary:hover,
+.wprl-pro-wrap .button-primary:focus{
+  background: var(--wprl-blue);
+  border-color: var(--wprl-blue);
+}
+
+/* Table styling similar to Free */
+.wprl-pro-wrap table.widefat{
+  border-radius: 6px;
+  overflow:hidden;
+}
+
+
+/* ===== Setup Wizard (Pro) ===== */
+/* added by patch v10 */
+
+
+.wprl-pro-wrap .wprl-wizard-top{ margin: 6px 0 18px; }
+.wprl-pro-wrap .wprl-wizard-stepper{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:0;
+  padding: 0 6px;
+}
+.wprl-pro-wrap .wprl-stepper-item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  min-width: 160px;
+}
+.wprl-pro-wrap .wprl-stepper-dot{
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: #fff;
+  border: 2px solid #c8cdd3;
+  box-sizing:border-box;
+}
+.wprl-pro-wrap .wprl-stepper-item.is-done .wprl-stepper-dot{
+  background: var(--wprl-yellow);
+  border-color: var(--wprl-yellow);
+}
+.wprl-pro-wrap .wprl-stepper-item.is-done .dashicons{
+  color:#fff;
+  font-size:18px;
+  width:18px;
+  height:18px;
+}
+.wprl-pro-wrap .wprl-stepper-item.is-active .wprl-stepper-dot{
+  border-color: var(--wprl-yellow);
+}
+.wprl-pro-wrap .wprl-stepper-ring{
+  width: 10px;
+  height: 10px;
+  border-radius:50%;
+  background: var(--wprl-yellow);
+  display:block;
+}
+.wprl-pro-wrap .wprl-stepper-label{
+  margin-top:10px;
+  font-size:13px;
+  letter-spacing: .5px;
+  color:#9aa0a6;
+  font-weight:600;
+}
+.wprl-pro-wrap .wprl-stepper-item.is-active .wprl-stepper-label{
+  color:#222;
+}
+.wprl-pro-wrap .wprl-stepper-line{
+  height:2px;
+  flex:1;
+  background:#d7dbe0;
+  margin: 0 12px;
+  transform: translateY(-14px);
+}
+.wprl-pro-wrap .wprl-stepper-line.is-done{ background: var(--wprl-yellow); }
+
+.wprl-pro-wrap .wprl-wizard-panel{
+  background:#fff;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 22px 22px 18px;
+}
+.wprl-pro-wrap .wprl-wizard-grid{
+  display:grid;
+  grid-template-columns: 1.1fr .6fr 1fr;
+  gap: 28px;
+  align-items:start;
+}
+
+.wprl-pro-wrap .wprl-wizard-title-row{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom: 12px;
+}
+.wprl-pro-wrap .wprl-wizard-badge{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background: var(--wprl-yellow);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+}
+.wprl-pro-wrap .wprl-wizard-title{
+  margin:0;
+  font-size:22px;
+  font-weight:800;
+  color:#111;
+}
+
+.wprl-pro-wrap .wprl-wizard-form .wprl-field{ margin-bottom: 18px; }
+.wprl-pro-wrap .wprl-wizard-form label{
+  display:block;
+  font-size:12px;
+  font-weight:700;
+  color:#222;
+  margin-bottom:8px;
+}
+.wprl-pro-wrap .wprl-wizard-form input, .wprl-pro-wrap 
+.wprl-pro-wrap .wprl-wizard-form select{
+  width: 360px;
+  max-width: 100%;
+  background:#efefef;
+  border:0;
+  padding: 12px 14px;
+  border-radius:3px;
+  box-shadow:none;
+}
+.wprl-pro-wrap .wprl-wizard-form select{ appearance:auto; }
+
+.wprl-pro-wrap .wprl-wizard-next{
+  display:block;
+  width:100%;
+  background: var(--wprl-green) !important;
+  border-color: var(--wprl-green) !important;
+  color:#fff !important;
+  padding: 14px 18px !important;
+  height:auto !important;
+  border-radius:3px !important;
+  font-weight:800 !important;
+  letter-spacing: 1px;
+}
+
+.wprl-pro-wrap .wprl-wizard-middle{
+  display:flex;
+  gap: 18px;
+  align-items:flex-start;
+  padding-top: 16px;
+}
+.wprl-pro-wrap .wprl-mini-steps{
+  display:flex;
+  flex-direction:column;
+  gap: 22px;
+  color:#555;
+  font-weight:600;
+}
+.wprl-pro-wrap .wprl-mini-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:13px;
+}
+.wprl-pro-wrap .wprl-q{
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:#8b9096;
+  color:#fff;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-size:12px;
+  font-weight:800;
+}
+.wprl-pro-wrap .wprl-mini-dots{
+  display:flex;
+  flex-direction:column;
+  gap: 18px;
+  margin-top: 4px;
+}
+.wprl-pro-wrap .wprl-mini-dot{
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  background:#aeb4ba;
+}
+.wprl-pro-wrap .wprl-mini-dot.is-active{ background: var(--wprl-green); }
+
+.wprl-pro-wrap .wprl-upsell-card{
+  background:#fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.15);
+  border: 1px solid #e6e8eb;
+  padding: 22px 22px 20px;
+  max-width: 360px;
+  margin-left:auto;
+}
+.wprl-pro-wrap .wprl-upsell-card h3{
+  margin:0 0 10px;
+  font-size:18px;
+  font-weight:800;
+  text-align:center;
+}
+.wprl-pro-wrap .wprl-upsell-card p{
+  margin:0 0 16px;
+  text-align:center;
+  color:#666;
+  line-height:1.5;
+}
+.wprl-pro-wrap .wprl-upsell-lock{
+  display:flex;
+  justify-content:center;
+  margin: 8px 0 14px;
+}
+.wprl-pro-wrap .wprl-buy-pro.button{
+  display:block;
+  margin: 0 auto;
+  background: var(--wprl-yellow) !important;
+  border-color: var(--wprl-yellow) !important;
+  color:#fff !important;
+  font-weight:800 !important;
+  padding: 12px 18px !important;
+  height:auto !important;
+  min-width: 170px;
+  text-align:center;
+  border-radius:3px !important;
+}
+
+@media (max-width: 1100px){
+.wprl-pro-wrap .wprl-wizard-grid{ grid-template-columns: 1fr; }
+.wprl-pro-wrap .wprl-upsell-card{ margin-left:0; max-width: 100%; }
+.wprl-pro-wrap .wprl-stepper-item{ min-width: 120px; }
+}
+
+/* Pro Setup Wizard tweaks */
+.wprl-pro-wrap .wprl-wizard-grid{ grid-template-columns: 1.1fr .6fr 1fr; }
+.wprl-pro-wrap .wprl-wizard-right{ min-height: 240px; }
+.wprl-pro-wrap .wprl-wizard-next{ background: var(--wprl-teal) !important; border-color: var(--wprl-teal) !important; }
+
+
+/* License expired banner (Pro dashboard) */
+.wprl-expired-banner{
+  display:flex;
+  align-items:center;
+  gap:22px;
+  padding: 22px 24px;
+  margin: 18px 0 18px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #D10000 0%, #FF0000 55%, #FF2E2E 100%);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+  color:#fff;
+}
+.wprl-expired-icon{
+  width:86px;
+  height:86px;
+  flex: 0 0 86px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.18);
+}
+.wprl-expired-body{
+  flex: 1 1 auto;
+  min-width: 260px;
+}
+.wprl-expired-title{
+  font-weight: 800;
+  letter-spacing: .5px;
+  font-size: 22px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.wprl-expired-text{
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: .95;
+}
+.wprl-expired-text a{
+  color:#fff;
+  text-decoration: underline;
+}
+.wprl-expired-cta{
+  flex: 0 0 auto;
+  background: #ffffff;
+  color: #000;
+  border-radius: 8px;
+  padding: 14px 18px;
+  font-weight: 800;
+  letter-spacing: .2px;
+  text-transform: uppercase;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+.wprl-expired-cta:hover{
+  transform: translateY(-1px);
+}
+@media (max-width: 980px){
+  .wprl-expired-banner{ flex-wrap: wrap; }
+  .wprl-expired-cta{ width: 100%; text-align:center; }
+}
